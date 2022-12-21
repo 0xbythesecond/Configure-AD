@@ -3,6 +3,7 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+Active Directory centrally manages thousands of user accounts in a single place (accounts, passwords and permissions) as well as manage devices on a large scale.
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 <h2>Environments and Technologies Used</h2>
@@ -19,14 +20,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
+- Domain Controller VM (Windows Server 2022) named “DC-1”
+- Domain Controller’s NIC Private IP address to be static
 - Step 3
 - Step 4
 
 <h2>Deployment and Configuration Steps</h2>
 <p>
-In step 1, the Resources in Azure were setup. The Domain Controller VM (Windows Server 2022) named “DC-1” was created while simultaneously creating the Resource Group and Virtual Network (Vnet). The Domain Controller’s NIC Private IP address was set to static. The Client VM (Windows 10) named “Client-1” was created with the same Resource Group and Vnet that was created in DC-1. The topology was checked with the Network Watcher, to ensure both VM's were in the same network.
+Firstly, we will need to establish the resource group so that you can add your virtual machines for the Domain Controller (DC-1) and the Client Virtual Machine (Client-1). The Domain Controller VM will use Windows Server 2022 Operating System . The Domain Controller’s NIC Private IP address are set to static. The Client VM (Windows 10) named “Client-1” was created with the same Resource Group and Vnet that was created in DC-1. The topology was checked with the Network Watcher, to ensure both VM's were in the same network.
 </p>
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>

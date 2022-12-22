@@ -27,12 +27,15 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 <p>
-Firstly, we will need to establish the resource group so that you can add your virtual machines for the Domain Controller (DC-1) and the Client Virtual Machine (Client-1). The Domain Controller VM will use Windows Server 2022 Operating System . The Domain Controller’s NIC Private IP address is set to static. The Client VM (Windows 10) named “Client-1” was created with the same Resource Group and Vnet that was created in DC-1. The topology was checked with the Network Watcher, to ensure both VM's were in the same network.
+Firstly, we will need to establish the resource group so that you can add your virtual machines for the Domain Controller (DC-1) and the Client Virtual Machine (Client-1). The Domain Controller VM will use Windows Server 2022 system image (a serialized copy of the entire state of a computer system stored in some non-volatile form such as a file). The Domain Controller’s NIC Private IP address is set to static. The Client VM (Windows 10) named “Client-1” was created with the same Resource Group and Vnet that was created in DC-1. The topology was checked with the Network Watcher, to ensure both VM's were in the same network.
 </p>
 <p align="center">
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/lKmRcIy.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-
+<p> IP address set to static (static IP addresses are necessary for devices that need constant access.)</p>
+<p align="center">
+<img src="https://i.imgur.com/n3KceWF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 <br />
 <p>
 In step 2, Connectivity between the client and Domain Controller was ensured by logging into Client-1 with Remote Desktop and pinging DC-1’s private IP address with ping -t (perpetual ping). ICMPv4 were enabled on the local windows Firewall. After logging back into Client-1 check to make sure the ping is successful.

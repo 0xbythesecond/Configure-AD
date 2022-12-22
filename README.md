@@ -22,7 +22,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Domain Controller VM (Windows Server 2022) named “DC-1”
 - Domain Controller’s NIC Private IP address to be static
-- Step 3
+- ICMPv4 (ping) was allowed on the Domain Controller
 - Step 4
 
 <h2>Deployment and Configuration Steps</h2>
@@ -38,21 +38,31 @@ Firstly, we will need to establish the resource group so that you can add your v
 </p>
 <br />
 <p>
-In step 2, Connectivity between the client and Domain Controller was ensured by logging into Client-1 with Remote Desktop and pinging DC-1’s private IP address with ping -t (perpetual ping). ICMPv4 were enabled on the local windows Firewall. After logging back into Client-1 check to make sure the ping is successful.
+Second, check for connection between the client device and domain controller by logging into Client-1 with Remote Desktop Connection (RDP) and pinging DC-1’s private IP address using ping -t (perpetual ping). ICMPv4 (ping) was allowed on the Domain Controller's (DC-1) Firewall in Windows Firewall (Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)). After logging back into Client-1 check to make sure the ping is successful.
 </p>
 <p align="center">
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
-<p>
-In step 3, Active Directory Domain Services was Installed by logging in to DC-1. Promoted as a DC: a new forest as mydomain.com was setup. Remote Desktop was Restarted and logged back into DC-1 as user: mydomain.com\labuser.
-</p>
-<p align="center">
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/FWLTP8X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
+<p> Pictured below displays that the icmp rule has been allowed on the windows firewall for inbound traffic: </p>
+<p align="center">
+<img src="https://i.imgur.com/f4i0pdh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
 <br />
-<p> In step 4, Remote Desktop was setup for non-administrative users jane_admin was used a the user name, PowerShell_ise was opened as an administrator. A new File was created and pasted into the contents of the script. When the script is run, account will created. The accounts can now be viewed in Active Directory in the appropriate organizational unit. </p>
+<p>
+While in DC-1, we've selected to 'add roles and features' to enable Active Directory Domain Services. Promoted as a DC: a new forest as mydomain.com setup. Remote Desktop was Restarted and logged back into DC-1 as user: mydomain.com\labuser.
+</p>
+<p align="center">
+<img src="https://i.imgur.com/ipCHp9t.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p></p>
+<p align="center">
+  <img src="https://i.imgur.com/Ccbt7ak.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+<p> Next, we configure the organizational units for the admins and employees in Active Directory while continuing to be in DC-1. emote Desktop was setup for non-administrative users jane_admin was used a the user name, PowerShell_ise was opened as an administrator. A new File was created and pasted into the contents of the script. When the script is run, account will created. The accounts can now be viewed in Active Directory in the appropriate organizational unit. </p>
+<p align="center">
+<img src="https://i.imgur.com/D59IbY9.png" height="80%" width="80%" alt="Active Directory OU"/>
+  </p>
 </br>
 
 

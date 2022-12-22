@@ -59,10 +59,22 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   <img src="https://i.imgur.com/Ccbt7ak.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
-<p> Next, we configure the organizational units for the admins and employees in Active Directory while continuing to be in DC-1. emote Desktop was setup for non-administrative users jane_admin was used a the user name, PowerShell_ise was opened as an administrator. A new File was created and pasted into the contents of the script. When the script is run, account will created. The accounts can now be viewed in Active Directory in the appropriate organizational unit. </p>
+<p> Next, we configure the organizational units for the admins and employees in Active Directory (AD) while continuing to be in DC-1 (Remote Desktop Connection).  The accounts can now be viewed in Active Directory in the appropriate organizational unit. In the Active Directory, right click on your <b>domain name</b> and move your mouse to hover <b>new</b>--><b>Organizational Unit</b> and left click to create folders for your AD. We will create employees, admins, and security groups.
+</p>
 <p align="center">
 <img src="https://i.imgur.com/D59IbY9.png" height="80%" width="80%" alt="Active Directory OU"/>
   </p>
 </br>
-
+<p> Create a new OU named '_ADMINS' --> Create a new employee named <b>Karen What</b> (same password) with the username of <b>'karen_admin'</b>. Once the admin is created, add "karen_admin" to the "domain admins" security group.</p>
+<p align="center">
+<img src="https://i.imgur.com/Qzlpsyk.png" height="80%" width="80%" alt="Add user to domain admins"/>
+  </p>
+  </br>
+<p>Log out and close the connection to dc-1 for current user(mydomain.com\labuser) and log back in as "mydomain.com\karen_admin".<p/>
+<p align="center">
+<img=src"https://i.imgur.com/WiQI5sG.png" height="80%" width="80%" alt="cmd displays new logged in user"/>
+ </p>
+  </br>
+  <p>
+  PowerShell_ise was opened as an administrator. A new File was created and pasted into the contents of the script. When the script is run, account will created.</p>
 

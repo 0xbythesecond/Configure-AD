@@ -25,6 +25,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - ICMPv4 (ping) was allowed on the Domain Controller
 - Create an Admin and Normal User Account in Active Directory
 - Join Client to domain
+- Attempt to login Client-1 with one of the users
 
 <h2>Deployment and Configuration Steps</h2>
 <p>
@@ -98,7 +99,7 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
     <p align="center">
   <img src="https://i.imgur.com/awUUK52.png" height="80%" width="80%" alt="message displays client added to domain"/>
   </p>
-  Now can create our users that will be loaded into our <b>_EMPLOYEES OU</b>. To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, once we run the script the random employees will be created.</p>
+  Now can create our users that will be loaded into our <b>_EMPLOYEES OU</b> in the domain controller (DC-1). To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, once we run the script the random employees will be created.</p>
   <p>Here is the script loaded into powershell prior to running the script to create 1000 random users</p>
   <p align="center">
   <img src="https://i.imgur.com/ez4THWm.png" height="80%" width="80%" alt="powershell with script loaded"/>
@@ -109,7 +110,11 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   <img src="https://i.imgur.com/f2vKx8Y.png" height="80%" width="80%" alt="powershell execute code"/> </p>
   <p> Those random Users are now reflected in Active Directory on the Domain Controller</p>
   <p align="center">
-  <img src="https://i.imgur.com/lHBM2nh.png" height="80%" width="80" alt="active directory shows created users"/>
+  <img src="https://i.imgur.com/lHBM2nh.png" height="80%" width="80%" alt="active directory shows created users"/>
+  </p>
+  <p> Attempt to login on Client-1 with a random user that has been created</p>
+  <p align="center">
+  <img src="https://i.imgur.com/juyKyvw.png" height="80%" width="80%" alt="windows start menu shows login user"/>
   </p>
 
 

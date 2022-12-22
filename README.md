@@ -107,5 +107,9 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   <p>Random users are created now after choosing to execute the code. Here we can now see the script loading the 1000 users:</p>
 <p align="center">    
   <img src="https://i.imgur.com/f2vKx8Y.png" height="80%" width="80%" alt="powershell execute code"/> </p>
+  <p> Those random Users are now reflected in Active Directory on the Domain Controller</p>
+  <p align="center">
+  <img src="https://i.imgur.com/lHBM2nh.png" height="80%" width="80" alt="active directory shows created users"/>
+  </p>
 
 

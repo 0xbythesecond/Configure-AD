@@ -23,7 +23,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Domain Controller VM (Windows Server 2022) named “DC-1”
 - Domain Controller’s NIC Private IP address to be static
 - ICMPv4 (ping) was allowed on the Domain Controller
-- Step 4
+- Create an Admin and Normal User Account in Active Directory
+- Join Client to domain
 
 <h2>Deployment and Configuration Steps</h2>
 <p>
@@ -72,9 +73,18 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   </br>
 <p>Log out and close the connection to dc-1 for current user(mydomain.com\labuser) and log back in as "mydomain.com\karen_admin".<p/>
 <p align="center">
-<img=src"https://i.imgur.com/WiQI5sG.png" height="80%" width="80%" alt="cmd displays new logged in user"/>
+<img src="https://i.imgur.com/WiQI5sG.png" height="80%" width="80%" alt="cmd displays new loggin user"/>
  </p>
   </br>
+  
+  <p>Next, we'll join Client-1 to the domain< (mydomain.com); however, we must change the DNS on Client-1 to the private IP address of DC-1 so that we can properly add client-1 to the domain. Here we will select the NIC on client-1 to change the dns to the private IP address of DC-1
+</p> 
+  <p align="center">
+    <img src="https://i.imgur.com/f2Vka1D.png" height="80%" width="80%" alt="select network inferface client 1"/> </p>
+    </br>
+    <p>Select 'DNS Servers' </p>
+      <p align="center">
+    <img src="https://i.imgur.com/BlO0rjn.png" height="80%" width="80%" alt="select network inferface client 1"/> </p>
   <p>
   PowerShell_ise was opened as an administrator. A new File was created and pasted into the contents of the script. When the script is run, account will created.</p>
 

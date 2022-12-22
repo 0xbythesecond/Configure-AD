@@ -114,7 +114,7 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   </p>
   <p> Attempt to login on Client-1 with a random user that has been created</p>
   <p align="center">
-  <img src="https://i.imgur.com/juyKyvw.png" height="80%" width="80%" alt="windows start menu shows login user"/>
+  <img src="https://i.imgur.com/HFguOhB.png" height="80%" width="80%" alt="windows start menu shows login user"/>
   </p>
 
 

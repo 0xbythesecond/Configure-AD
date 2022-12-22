@@ -85,6 +85,27 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
     <p>Select 'DNS Servers' </p>
       <p align="center">
     <img src="https://i.imgur.com/BlO0rjn.png" height="80%" width="80%" alt="select network inferface client 1"/> </p>
-  <p>
-  PowerShell_ise was opened as an administrator. A new File was created and pasted into the contents of the script. When the script is run, account will created.</p>
+    </br>
+    <p> Select 'Custom' radio button for DNS server so that you can now enter the DC-1 private IP address. </p>
+  <p align="center">
+  <img src="https://i.imgur.com/Rcjik7d.png" height="80%" width="80%" alt="select customer dns"/></p>
+  </br>
+  <p> Now that we have successfully changed the DNS server to the private IP address of DC-1, we can add client-1 to the domain without error. You will receive a message letting you know that the client has been successfully added to the domain. This can be done by going to System > Rename This PC > enter domain name > select OK > select Apply. The update this then require a system restart.  
+  <p align="center">
+    <img src="https://i.imgur.com/v2B6jza.png" height="80%" width="80%" alt="add to domain"/></p>
+    </br>
+    <p>Message displays that client has been successfully add to the domain</p>
+    <p align="center">
+  <img src="https://i.imgur.com/awUUK52.png" height="80%" width="80%" alt="message displays client added to domain"/>
+  </p>
+  Now can create our users that will be loaded into our <b>_EMPLOYEES OU</b>. To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, once we run the script the random employees will be created.</p>
+  <p>Here is the script loaded into powershell prior to running the script to create 1000 random users</p>
+  <p align="center">
+  <img src="https://i.imgur.com/ez4THWm.png" height="80%" width="80%" alt="powershell with script loaded"/>
+  </p>
+  </br>
+  <p>Random users are created now after choosing to execute the code. Here we can now see the script loading the 1000 users:</p>
+<p align="center">    
+  <img src="https://i.imgur.com/f2vKx8Y.png" height="80%" width="80%" alt="powershell execute code"/> </p>
+
 

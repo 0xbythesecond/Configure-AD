@@ -116,5 +116,6 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   <p align="center">
   <img src="https://i.imgur.com/HFguOhB.png" height="80%" width="80%" alt="windows start menu shows login user"/>
   </p>
-
+  <p align="center"><b><i>It is good to have an end to journey toward; but it is the journey that matters, in the end.”</p></b></i>
+<p align="center"><b><i>"So, what is it? What is it you’re doing with this one wild and precious life of yours?”💭</p></b></i>
 

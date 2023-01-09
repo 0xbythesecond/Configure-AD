@@ -118,4 +118,6 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
   </p>
   <p align="center"><b><i>"It is good to have an end to journey toward; but it is the journey that matters, in the end.”</p></b></i>
 <p align="center"><b><i>"So, what is it? What is it you’re doing with this one wild and precious life of yours?”💭</p></b></i>
-
+<br />
+<br />
+<p align="right"> Next up, <a href="https://github.com/0xbythesecond/azure-network-protocols" Azure Network Protocols </a></p>

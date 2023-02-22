@@ -51,7 +51,7 @@ Second, check for connection between the client device and domain controller by 
 <img src="https://i.imgur.com/f4i0pdh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
 <br />
 <p>
-While in DC-1, we've selected to 'add roles and features' to enable Active Directory Domain Services. Promoted as a DC: a new forest as mydomain.com setup. Remote Desktop was Restarted and logged back into DC-1 as user: mydomain.com\labuser.
+While in DC-1, we've selected to 'add roles and features' to enable Active Directory Domain Services. Promoted as a Domain Controller (DC): a new forest as mydomain.com setup. Remote Desktop was Restarted and logged back into DC-1 as user: mydomain.com\labuser.
 </p>
 <p align="center">
 <img src="https://i.imgur.com/ipCHp9t.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>

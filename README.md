@@ -35,7 +35,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 | Active Directory Domain Services | are the core functions in Active Directory that manage users and computers and allow sysadmins to organize the data into logical hierarchies.
 | Powershell |  is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS.
 | Domain Controller |  are the servers in your network that host AD DS. DCs respond to authentication requests and store AD DS data
-|Organizational Unit (OU) | Organizational units (OUs) in an Active Directory Domain Services (AD DS) managed domain let you logically group objects such as user accounts, service accounts, or computer accounts. You can then assign administrators to specific OUs, and apply group policy to enforce targeted configuration settings.|
+|Organizational Unit (OU) | Organizational units (OUs) in an Active Directory Domain Services (AD DS) managed domain let you logically group objects such as user accounts, service accounts, or computer accounts. You can then assign administrators to specific OUs, and apply group policy to enforce targeted configuration settings.
+|Join Client to Domain | Joining a computer to a domain means connecting that computer to a network that is managed by a centralized server known as a domain controller. A domain is a logical grouping of computers, users, and resources that can be managed centrally by a network administrator. Overall, joining a computer to a domain helps to improve security, simplify network management, and increase productivity. |
 
 <h2>Deployment and Configuration Steps</h2>
 <p>

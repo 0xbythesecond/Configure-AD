@@ -27,6 +27,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Join Client to domain
 - Attempt to login Client-1 with one of the users
 
+| Terms | Descriptions|
+|-------| ------------|
+| Virtual Machine | is a digital version of a physical computer. Virtual machine software can run programs and operating systems, store data, connect to networks, and do other computing functions, and requires maintenance such as updates and system monitoring
+| Remote Desktop | Remote desktop is the ability to connect with and use a faraway desktop computer from a separate computer. Remote desktop users can access their desktop, open and edit files, and use applications as if they were actually sitting at their desktop computer.
+| Active Directory Domain Services | are the core functions in Active Directory that manage users and computers and allow sysadmins to organize the data into logical hierarchies.
+| Powershell |  is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS.
+| Domain Controller |  are the servers in your network that host AD DS. DCs respond to authentication requests and store AD DS data |
+
 <h2>Deployment and Configuration Steps</h2>
 <p>
 Firstly, we will need to establish the resource group so that you can add your virtual machines for the Domain Controller (DC-1) and the Client Virtual Machine (Client-1). The Domain Controller VM will use Windows Server 2022 system image (a serialized copy of the entire state of a computer system stored in some non-volatile form such as a file). The Domain Controller’s NIC Private IP address is set to static. 

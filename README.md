@@ -112,7 +112,7 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
     <p align="center">
   <img src="https://i.imgur.com/awUUK52.png" height="80%" width="80%" alt="message displays client added to domain"/>
   </p>
-  Now can create our users that will be loaded into our <b>_EMPLOYEES OU</b> in the domain controller (DC-1). To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, once we run the script the random employees will be created.</p>
+  Now, we can create our users that will be loaded into our <b>_EMPLOYEES OU</b> in the domain controller (DC-1). To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, the random employees will be created.</p>
   
 ```powershell
 # ----- Edit these Variables for your own Use Case ----- #

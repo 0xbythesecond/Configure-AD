@@ -91,7 +91,7 @@ Create a new OU named '_ADMINS' --> Create a new employee named <b>Karen What</b
   </br>
 Log out and close the connection to dc-1 for current user(mydomain.com\labuser) and log back in as "mydomain.com\karen_admin".
 <p align="center">
-<img src="https://i.imgur.com/WiQI5sG.png" height="80%" width="80%" alt="cmd displays new loggin user"/>
+<img src="https://i.imgur.com/WiQI5sG.png" height="50%" width="50%" alt="cmd displays new loggin user"/>
  </p>
   </br>
   
@@ -106,15 +106,15 @@ Next, we'll join Client-1 to the domain< (mydomain.com); however, we must change
     </br>
     Select 'Custom' radio button for DNS server so that you can now enter the DC-1 private IP address.
   <p align="center">
-  <img src="https://i.imgur.com/Rcjik7d.png" height="80%" width="80%" alt="select customer dns"/></p>
+  <img src="https://i.imgur.com/Rcjik7d.png" height="40%" width="40%" alt="select customer dns"/></p>
   </br>
   Now that we have successfully changed the DNS server to the private IP address of DC-1, we can add client-1 to the domain without error. You will receive a message letting you know that the client has been successfully added to the domain. This can be done by going to System > Rename This PC > enter domain name > select OK > select Apply. The update this then require a system restart.  
   <p align="center">
-    <img src="https://i.imgur.com/v2B6jza.png" height="80%" width="80%" alt="add to domain"/></p>
+    <img src="https://i.imgur.com/v2B6jza.png" height="50%" width="50%" alt="add to domain"/></p>
     </br>
     Message displays that client has been successfully add to the domain
     <p align="center">
-  <img src="https://i.imgur.com/awUUK52.png" height="80%" width="80%" alt="message displays client added to domain"/>
+  <img src="https://i.imgur.com/awUUK52.png" height="50%" width="50%" alt="message displays client added to domain"/>
   </p>
   Now, we can create our users that will be loaded into our <b>_EMPLOYEES OU</b> in the domain controller (DC-1). To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, the random employees will be created.
   

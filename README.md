@@ -3,7 +3,7 @@
 </p>
 
 # On-premises Active Directory Deployed in the Cloud (Azure)
-Active Directory centrally manages thousands of user accounts in a single place (accounts, passwords and permissions) as well as manage devices on a large scale.
+Active Directory centrally manages thousands of user accounts in a single place (accounts, passwords, and permissions) as well as manage devices on a large scale.
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 ## Environments and Technologies Used
@@ -29,7 +29,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 | Terms | Descriptions|
 |-------| ------------|
-| Resource Group | is a container that holds related resources for an Azure solution. The resource group can include all the resources for the solution, or only those resources that you want to manage as a group.
+| Resource Group | is a container that holds related resources for an Azure solution. The resource group can include all the resources for the solution or only those resources that you want to manage as a group.
 | Virtual Machine | is a digital version of a physical computer. Virtual machine software can run programs and operating systems, store data, connect to networks, and do other computing functions, and requires maintenance such as updates and system monitoring
 | Remote Desktop | Remote desktop is the ability to connect with and use a faraway desktop computer from a separate computer. Remote desktop users can access their desktop, open and edit files, and use applications as if they were actually sitting at their desktop computer.
 | Active Directory Domain Services | are the core functions in Active Directory that manage users and computers and allow sysadmins to organize the data into logical hierarchies.
@@ -40,7 +40,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ## Deployment and Configuration Steps
 
-Firstly, we will need to establish the resource group so that you can add your virtual machines for the Domain Controller (DC-1) and the Client Virtual Machine (Client-1). The Domain Controller VM will use Windows Server 2022 system image (a serialized copy of the entire state of a computer system stored in some non-volatile form such as a file). 
+Firstly, we will need to establish the resource group so that you can add your virtual machines for the Domain Controller (DC-1) and the Client Virtual Machine (Client-1). The Domain Controller VM will use a Windows Server 2022 system image (a serialized copy of the entire state of a computer system stored in some non-volatile form such as a file). 
 
 <p align="center">
 <img src="https://i.imgur.com/lKmRcIy.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -61,7 +61,7 @@ Second, check for connection between the client device and domain controller by 
 <img src="https://i.imgur.com/FWLTP8X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-Pictured below displays that the icmp rule has been allowed on the windows firewall for inbound traffic:
+Pictured below displays that the ICMP rule has been allowed on the Windows firewall for inbound traffic:
 <p align="center">
 <img src="https://i.imgur.com/f4i0pdh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
 </p>
@@ -77,7 +77,7 @@ While in DC-1, we've selected to 'add roles and features' to enable Active Direc
 </p>
 <br />
 
-Next, we configure the organizational units for the admins and employees in Active Directory (AD) while continuing to be in DC-1 (Remote Desktop Connection).  The accounts can now be viewed in Active Directory in the appropriate organizational unit. In the Active Directory, right click on your <b>domain name</b> and move your mouse to hover <b>new</b>--><b>Organizational Unit</b> and left click to create folders for your AD. We will create employees, admins, and security groups.
+Next, we configure the organizational units for the admins and employees in Active Directory (AD) while continuing to be in DC-1 (Remote Desktop Connection).  The accounts can now be viewed in Active Directory in the appropriate organizational unit. In the Active Directory, right-click on your <b>domain name</b> and move your mouse to hover <b>new</b>--><b>Organizational Unit</b> and left-click to create folders for your AD. We will create employees, admins, and security groups.
 
 <p align="center">
 <img src="https://i.imgur.com/D59IbY9.png" height="80%" width="80%" alt="Active Directory OU"/>
@@ -89,13 +89,13 @@ Create a new OU named '_ADMINS' --> Create a new employee named <b>Karen What</b
 <img src="https://i.imgur.com/Qzlpsyk.png" height="80%" width="80%" alt="Add user to domain admins"/>
   </p>
   </br>
-Log out and close the connection to dc-1 for current user(mydomain.com\labuser) and log back in as "mydomain.com\karen_admin".
+Log out and close the connection to dc-1 for the current user(mydomain.com\labuser) and log back in as "mydomain.com\karen_admin".
 <p align="center">
 <img src="https://i.imgur.com/WiQI5sG.png" height="50%" width="50%" alt="cmd displays new loggin user"/>
  </p>
   </br>
   
-Next, we'll join Client-1 to the domain< (mydomain.com); however, we must change the DNS on Client-1 to the private IP address of DC-1 so that we can properly add client-1 to the domain. Here we will select the NIC on client-1 to change the dns to the private IP address of DC-1
+Next, we'll join Client-1 to the domain< (mydomain.com); however, we must change the DNS on Client-1 to the private IP address of DC-1 so that we can properly add client-1 to the domain. Here we will select the NIC on client-1 to change the DNS to the private IP address of DC-1
  
   <p align="center">
     <img src="https://i.imgur.com/f2Vka1D.png" height="80%" width="80%" alt="select network inferface client 1"/> </p>
@@ -108,15 +108,15 @@ Next, we'll join Client-1 to the domain< (mydomain.com); however, we must change
   <p align="center">
   <img src="https://i.imgur.com/Rcjik7d.png" height="40%" width="40%" alt="select customer dns"/></p>
   </br>
-  Now that we have successfully changed the DNS server to the private IP address of DC-1, we can add client-1 to the domain without error. You will receive a message letting you know that the client has been successfully added to the domain. This can be done by going to System > Rename This PC > enter domain name > select OK > select Apply. The update this then require a system restart.  
+  Now that we have successfully changed the DNS server to the private IP address of DC-1, we can add client-1 to the domain without error. You will receive a message letting you know that the client has been successfully added to the domain. This can be done by going to System > Rename This PC > enter domain name > select OK > select Apply. The update then requires a system restart.  
   <p align="center">
     <img src="https://i.imgur.com/v2B6jza.png" height="50%" width="50%" alt="add to domain"/></p>
     </br>
-    Message displays that client has been successfully add to the domain
+    A message displays that the client has been successfully added to the domain
     <p align="center">
   <img src="https://i.imgur.com/awUUK52.png" height="50%" width="50%" alt="message displays client added to domain"/>
   </p>
-  Now, we can create our users that will be loaded into our <b>_EMPLOYEES OU</b> in the domain controller (DC-1). To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, the random employees will be created.
+  Now, we can create our users that will be loaded into our <b>_EMPLOYEES OU</b> in the domain controller (DC-1). To create these employees we will run <b>PowerShell_ISE</b> as an <b>administrator</b>. A new File will be created then we can enter the pre-configured script into the file. When the script is run, random employees will be created.
   
 <details>  
   <summary> <h6>pre-configured Powershell Script</h6> </summary>

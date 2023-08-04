@@ -35,7 +35,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 | Active Directory Domain Services | are the core functions in Active Directory that manage users and computers and allow sysadmins to organize the data into logical hierarchies.
 | Powershell |  is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS.
 | Domain Controller |  are the servers in your network that host AD DS. DCs respond to authentication requests and store AD DS data
-|Organizational Unit (OU) | Organizational units (OUs) in an Active Directory Domain Services (AD DS) managed domain let you logically group objects such as user accounts, service accounts, or computer accounts. You can then assign administrators to specific OUs, and apply group policy to enforce targeted configuration settings.
+|Organizational Unit (OU) | Organizational units (OUs) in an Active Directory Domain Services (AD DS) managed domain to let you logically group objects such as user accounts, service accounts, or computer accounts. You can then assign administrators to specific OUs, and apply group policy to enforce targeted configuration settings.
 |Join Client to Domain | Joining a computer to a domain means connecting that computer to a network that is managed by a centralized server known as a domain controller. A domain is a logical grouping of computers, users, and resources that can be managed centrally by a network administrator. Overall, joining a computer to a domain helps to improve security, simplify network management, and increase productivity. |
 
 ## Deployment and Configuration Steps
@@ -55,7 +55,7 @@ Private IP address set to static (static IP addresses are necessary for devices 
 </p>
 <br />
 
-Second, check for connection between the client device and domain controller by logging into Client-1 with Remote Desktop Connection (RDP) and pinging DC-1’s private IP address using ping -t (perpetual ping). ICMPv4 (ping) was allowed on the Domain Controller's (DC-1) Firewall in Windows Firewall (Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)). After logging back into Client-1 check to make sure the ping is successful.
+Second, check for a connection between the client device and domain controller by logging into Client-1 with Remote Desktop Connection (RDP) and pinging DC-1’s private IP address using ping -t (perpetual ping). ICMPv4 (ping) was allowed on the Domain Controller's (DC-1) Firewall in Windows Firewall (Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)). After logging back into Client-1 check to make sure the ping is successful.
 
 <p align="center">
 <img src="https://i.imgur.com/FWLTP8X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -83,7 +83,8 @@ Next, we configure the organizational units for the admins and employees in Acti
 <img src="https://i.imgur.com/D59IbY9.png" height="80%" width="80%" alt="Active Directory OU"/>
   </p>
 </br>
-Create a new OU named '_ADMINS' --> Create a new employee named <b>Karen What</b> (same password) with the username of <b>'karen_admin'</b>. Once the admin is created, add "karen_admin" to the "domain admins" security group.
+
+Create a new OU named '_ADMINS' --> Create a new employee named **Karen What** (same password) with the username of **'karen_admin'**. Once the admin is created, add "karen_admin" to the "domain admins" security group.
 
 <p align="center">
 <img src="https://i.imgur.com/Qzlpsyk.png" height="80%" width="80%" alt="Add user to domain admins"/>
@@ -95,16 +96,16 @@ Log out and close the connection to dc-1 for the current user(mydomain.com\labus
  </p>
   </br>
   
-Next, we'll join Client-1 to the domain< (mydomain.com); however, we must change the DNS on Client-1 to the private IP address of DC-1 so that we can properly add client-1 to the domain. Here we will select the NIC on client-1 to change the DNS to the private IP address of DC-1
+Next, we'll join Client-1 to the domain (mydomain.com); however, we must change the DNS on Client-1 to the private IP address of DC-1 so that we can properly add client-1 to the domain. Here we will select the NIC on client-1 to change the DNS to the private IP address of DC-1
  
   <p align="center">
-    <img src="https://i.imgur.com/f2Vka1D.png" height="80%" width="80%" alt="select network inferface client 1"/> </p>
+    <img src="https://i.imgur.com/f2Vka1D.png" height="80%" width="80%" alt="select network interface client 1"/> </p>
     </br>
     Select 'DNS Servers'
       <p align="center">
-    <img src="https://i.imgur.com/BlO0rjn.png" height="80%" width="80%" alt="select network inferface client 1"/> </p>
+    <img src="https://i.imgur.com/BlO0rjn.png" height="80%" width="80%" alt="select network interface client 1"/> </p>
     </br>
-    Select 'Custom' radio button for DNS server so that you can now enter the DC-1 private IP address.
+    Select the 'Custom' radio button for DNS server so that you can now enter the DC-1 private IP address.
   <p align="center">
   <img src="https://i.imgur.com/Rcjik7d.png" height="40%" width="40%" alt="select customer dns"/></p>
   </br>
